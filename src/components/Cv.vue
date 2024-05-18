@@ -26,7 +26,7 @@ onMounted(() => {
         <p class="mt0">nacimiento: 1973</p>
         <p class="text mt3">Hola!, soy una persona con <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a>,
           utilizo el
-          proceso intensivo para prácticamente todo, por lo que quizás posea
+          proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, por lo que quizás posea
           <a target="_blank"
              href="https://mariagomezpsicologia.com/altas-capacidades/que-relacion-hay-entre-alta-sensibilidad-y-altas-capacidades-lo-que-dicen-las-investigaciones/">altas
             capacidades</a>, ya que puedo aprender y abordar temáticas complejas en todos los ámbitos en muy poco tiempo.</p>
