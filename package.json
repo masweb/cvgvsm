@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production VUE_APP_BASE_URL=/cvgvsm/ npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tabler/icons": "^3.3.0",
@@ -31,6 +31,7 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
     "npm-run-all2": "^6.1.2",
