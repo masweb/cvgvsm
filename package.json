@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy": "cross-env NODE_ENV=production VUE_APP_BASE_URL=/cvgvsm/ npm run build && gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production VITE_APP_BASE_URL=/cvgvsm/ npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tabler/icons": "^3.4.0",
