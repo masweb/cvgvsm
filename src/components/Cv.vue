@@ -22,7 +22,8 @@ onMounted(() => {
       </n-grid-item>
       <n-grid-item class="letter">
         <div><strong>Guillermo Valentín Sánchez</strong></div>
-        <p class="mt0 mb0">Desarrollador front end. Diseñador gráfico.</p>
+        <p class="mt0 mb0">Desarrollador front end senior.</p>
+        <p class="mt0 mb0">Diseñador gráfico.</p>
         <p class="mt0">nacimiento: 1973</p>
         <p class="text mt3">Hola!, soy una persona con <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a>,
           utilizo el
@@ -172,23 +173,24 @@ onMounted(() => {
     <h3 class="mb0"><strong>Backend</strong></h3>
     <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
       <n-grid-item>
+        <p class="mb2 mt1">Creación de backend API Rest o con plantillas con GO/Gin, TypeScript/Adonis, PHP/Laravel</p>
         <p class="mb2 mt1">Creación, diseño y optimización de bases de datos relacionales MySql, MariaDB, Postgress...</p>
         <p class="mb2 mt2">Migraciones y generación de datos de prueba.</p>
-        <p class="mb2 mt2">Login y registro seguro.</p>
-        <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor.</p>
+        <p class="mb2 mt2">Login y registro seguro, encriptación.</p>
+        <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor, imagen, vectorial, excel, pdf ...</p>
       </n-grid-item>
       <n-grid-item>
-        <p class="mb1 mt1">Paginación y pre-proceso de información e imágenes.</p>
+        <p class="mb1 mt1">Paginación.</p>
         <p class="mb2 mt2">Envío de correos automatizados.</p>
         <p class="mb2 mt2">Creación de tareas periódicas.</p>
         <p class="mb2 mt2">Caché en disco o memoria.</p>
-        <p class="mb1 mt2">Manejo de eventos y colas.</p>
+        <p class="mb1 mt2">Manejo de eventos y colas de eventos.</p>
       </n-grid-item>
       <n-grid-item>
         <p class="mb2 mt1">Uso de Linux.</p>
-        <p class="mb2 mt2">Gestión de dependencias con Composer.</p>
-        <p class="mb2 mt2">Test unitarios</p>
-        <p class="mb2 mt2">ORM Eloquent y Lucid.</p>
+        <p class="mb2 mt2">Gestión de dependencias.</p>
+        <p class="mb2 mt2">Test unitarios.</p>
+        <p class="mb2 mt2">ORM Gorm, Eloquent y Lucid.</p>
       </n-grid-item>
     </n-grid>
 

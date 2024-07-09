@@ -14,31 +14,31 @@
     "deploy": "cross-env NODE_ENV=production VITE_APP_BASE_URL=/cvgvsm/ npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "@tabler/icons": "^3.4.0",
-    "@vueuse/core": "^10.9.0",
+    "@tabler/icons": "^3.10.0",
+    "@vueuse/core": "^10.11.0",
     "basscss": "^8.1.0",
     "gh-pages": "^6.1.1",
     "naive-ui": "^2.38.2",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0",
     "vue-tabler-icons": "^2.21.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.12",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@types/node": "^20.14.10",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "npm-run-all2": "^6.2.0",
-    "prettier": "^3.2.5",
-    "sass": "^1.77.2",
-    "typescript": "~5.4.5",
-    "vite": "^5.2.11",
-    "vue-tsc": "^2.0.19"
+    "eslint-plugin-vue": "^9.27.0",
+    "npm-run-all2": "^6.2.2",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6",
+    "typescript": "~5.5.3",
+    "vite": "^5.3.3",
+    "vue-tsc": "^2.0.26"
   }
 }
