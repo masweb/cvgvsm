@@ -40,9 +40,9 @@ onMounted(() => {
           pruebas unitarias y end to end.</p>
         <p class="text">Configuración y manejo de Git, GitHub, Docker, IA para programar.</p>
         <p class="text">Usabilidad, interfaces gráficas, WYSIWYG, accesibilidad, multiidioma.</p>
-        <p class="text">Desarrollo de aplicaciones completas, backend en PHP - Laravel o Typescript - Adonis JS.</p>
+        <p class="text">Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS.</p>
         <p class="text">Comercio elecrónico, backoffices personalizados, aplicaciones de móviles y de escritorio. Interesado en el la publicación de IA para
-          usuario final, WASM y Rust.</p>
+          usuario final, WASM y GO.</p>
       </n-grid-item>
 
     </n-grid>
