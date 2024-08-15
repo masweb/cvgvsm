@@ -25,13 +25,8 @@ onMounted(() => {
         <p class="mt0 mb0">Desarrollador front end senior.</p>
         <p class="mt0 mb0">Diseñador gráfico.</p>
         <p class="mt0">nacimiento: 1973</p>
-        <p class="text mt3">Hola!, soy una persona con <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a>,
-          utilizo el
-          proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, por lo que quizás posea
-          <a target="_blank"
-             href="https://mariagomezpsicologia.com/altas-capacidades/que-relacion-hay-entre-alta-sensibilidad-y-altas-capacidades-lo-que-dicen-las-investigaciones/">altas
-            capacidades</a>, ya que puedo aprender y abordar temáticas complejas en todos los ámbitos en muy poco tiempo.</p>
-        <p class="text">Desde el año 1992 he trabajado en entornos de edición y publicidad.
+
+        <p class="text">Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad.
           Entusiasta de las tecnologías y desarrollo de software, autodidacta, codificando profesionalmente desde 2012.
           Transicioné el paso de jQuery para todo a javascript moderno en entornos profesionales.</p>
         <p class="text">Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en Vue 3, Typescript y Nuxt 3
@@ -44,6 +39,13 @@ onMounted(() => {
         <p class="text">Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS.</p>
         <p class="text">Comercio elecrónico, backoffices personalizados, aplicaciones de móviles y de escritorio. Interesado en el la publicación de IA para
           usuario final, WASM y GO.</p>
+
+        <p class="text mt3">Soy una persona con <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a>,
+          utilizo el
+          proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, por lo que quizás posea
+          <a target="_blank"
+             href="https://mariagomezpsicologia.com/altas-capacidades/que-relacion-hay-entre-alta-sensibilidad-y-altas-capacidades-lo-que-dicen-las-investigaciones/">altas
+            capacidades</a>, ya que puedo aprender y abordar temáticas complejas en todos los ámbitos en muy poco tiempo.</p>
       </n-grid-item>
 
     </n-grid>
