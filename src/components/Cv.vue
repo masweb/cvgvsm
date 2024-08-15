@@ -35,8 +35,8 @@ onMounted(() => {
           Entusiasta de las tecnologías y desarrollo de software, autodidacta, codificando profesionalmente desde 2012.
           Transicioné el paso de jQuery para todo a javascript moderno en entornos profesionales.</p>
         <p class="text">Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en Vue 3, Typescript y Nuxt 3
-          al realizar una gran cantidad de proyectos profesionales únicamente en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta facilidad proyectos de  </p>
-        React y Angular.
+          al realizar una gran cantidad de proyectos profesionales únicamente en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta facilidad proyectos de React y Angular. </p>
+
         <p class="text">Reutilización de componentes, estudio de la arquitectura, buenas prácticas, código legible y mantenible,
           pruebas unitarias y end to end.</p>
         <p class="text">Configuración y manejo de Git, GitHub, Docker, IA para programar.</p>
