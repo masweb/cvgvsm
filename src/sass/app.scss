@@ -4,11 +4,12 @@
 @import '../../node_modules/basscss/css/basscss.css';
 
 html, body {
-  font-family: 'Inter';
+  font-family: 'Times New Roman';
+  font-style: italic;
   -webkit-font-smoothing: antialiased; /* Para Chrome, Safari */
   -moz-osx-font-smoothing: grayscale; /* Para Firefox */
   text-rendering: optimizeLegibility; /* Mejora la legibilidad del texto en navegadores */
-
+  font-size: 19px;
 }
 
 html.dark, html.dark body {
@@ -26,6 +27,8 @@ a {
   color: #0a89bf !important;
   text-decoration: none;
 }
+
+
 
 .toggle {
   background-color: #333;
@@ -61,10 +64,8 @@ html.dark {
   }
 }
 .letter {
-  font-family: "Noto Serif", serif;
-  font-style: italic;
-  font-size: 1.2em!important;
-  margin-top: 30px;
+
+   margin-top: 30px;
 
 }
 .pic {

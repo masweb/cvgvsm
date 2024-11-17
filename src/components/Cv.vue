@@ -22,30 +22,28 @@ onMounted(() => {
       </n-grid-item>
       <n-grid-item class="letter">
         <div><strong>Guillermo Valentín Sánchez</strong></div>
-        <p class="mt0 mb0">Desarrollador front end senior.</p>
-        <p class="mt0 mb0">Diseñador gráfico.</p>
+        <p class="mt0 mb0"><strong>Desarrollador front end senior</strong></p>
+        <p class="mt0 mb0"><strong>Diseñador gráfico</strong></p>
         <p class="mt0">nacimiento: 1973</p>
-
-        <p class="text">Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad.
-          Entusiasta de las tecnologías y desarrollo de software, autodidacta, codificando profesionalmente desde 2012.
-          Transicioné el paso de jQuery para todo a javascript moderno en entornos profesionales.</p>
-        <p class="text">Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en Vue 3, Typescript y Nuxt 3
-          al realizar una gran cantidad de proyectos profesionales únicamente en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta facilidad proyectos de React y Angular. </p>
-
-        <p class="text">Reutilización de componentes, estudio de la arquitectura, buenas prácticas, código legible y mantenible,
-          pruebas unitarias y end to end.</p>
-        <p class="text">Configuración y manejo de Git, GitHub, Docker, IA para programar.</p>
-        <p class="text">Usabilidad, interfaces gráficas, WYSIWYG, accesibilidad, multiidioma.</p>
-        <p class="text">Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS.</p>
-        <p class="text">Comercio elecrónico, backoffices personalizados, aplicaciones de móviles y de escritorio. Interesado en el la publicación de IA para
-          usuario final, WASM y GO.</p>
-
-        <p class="text mt3">Soy una persona con <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a>,
-          utilizo el
-          proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, por lo que quizás posea
-          <a target="_blank"
-             href="https://mariagomezpsicologia.com/altas-capacidades/que-relacion-hay-entre-alta-sensibilidad-y-altas-capacidades-lo-que-dicen-las-investigaciones/">altas
-            capacidades</a>, ya que puedo aprender y abordar temáticas complejas en todos los ámbitos en muy poco tiempo.</p>
+        <p class="text">Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad, como diseñador gráfico, aunque ahora ya no ejerzo, definitivamente esa
+          experiencia es muy útil para realizar de manera óptima mis tareas como maquetador web y desarrollador front-end.</p>
+        <p class="text">Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, llevo codificando profesionalmente desde 2012. Transicioné el paso de
+          jQuery para todo, a <strong>JavaScript moderno</strong> en entornos profesionales. </p>
+        <p class="text">Soy una persona <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a> con altas capacidades,
+          utilizo el proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, puedo comprender, aprender y abordar temáticas complejas
+          en todos los ámbitos en muy poco tiempo.</p>
+        <p class="text">En los últimos años he sido partícipe en un porcentaje muy alto en un proyecto realmente grande para gestión de eventos donde he ideado y producido
+          un editor web desde 0, totalmente operativo, esto me ha permitido llevar las tecnologías al límite y conocer los mejores métodos, técnicas y librerías para desarrollo
+          front-end, además de habituarme al trabajo en equipo con <strong>Jira</strong>, <strong>Git Flow</strong>.</p>
+        <p class="text">Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en <strong>Vue</strong> 3, <strong>Typescript</strong> y <strong>Nuxt</strong> 3
+          al realizar una gran cantidad de proyectos profesionales en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta facilidad
+          proyectos de <strong>React</strong> y <strong>Angular</strong>.</p>
+        <p class="text"><strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>, <strong>buenas prácticas</strong>, <strong>código legible y mantenible</strong>,
+          <strong>patrones de diseño</strong>, <strong>pruebas unitarias</strong> y <strong>end to end</strong>. Configuración y manejo de <strong>Git</strong>, <strong>GitHub</strong>,
+            <strong>Docker</strong>, <strong>IA para programa</strong>r. <strong>Usabilidad</strong>, <strong>interfaces gráficas</strong>, <strong>WYSIWYG</strong>,
+              <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>, <strong>SCSS</strong> 12 años experiencia.</p>
+        <p class="text">Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS. Comercio electrónico, backoffices personalizados,
+          aplicaciones móviles y de escritorio. Interesado en el la publicación de IA para usuario final, WASM y GO.</p>
       </n-grid-item>
 
     </n-grid>
@@ -81,52 +79,52 @@ onMounted(() => {
       <n-grid-item>
         <p class="mb0"><b>Bmotion</b></p>
         <p class="mt0 mb0">Desarrollo aplicaciones nocode</p>
-        <p class="mt0">may.2022 • Actualidad • Madrid (remoto)</p>
+        <p class="mt0 mb2">may.2022 • Actualidad • Madrid (remoto)</p>
 
         <p class="mb0"><b>Indexeo Marketing</b></p>
         <p class="mt0 mb0">Desarrollo web, mantenimiento</p>
-        <p class="mt0">ene.2021 • mayo 2022 • Ibi (remoto)</p>
+        <p class="mt0 mb2">ene.2021 • mayo 2022 • Ibi (remoto)</p>
 
         <p class="mb0"><b>Por cuenta propia</b></p>
         <p class="mt0 mb0">Desarrollo web, diseño gráfico/web</p>
-        <p class="mt0">ene.2020 • ene.2021 • Santa Pola</p>
+        <p class="mt0 mb2">ene.2020 • ene.2021 • Santa Pola</p>
 
         <p class="mb0"><b>NovoSpain</b></p>
         <p class="mt0 mb0">Desarrollo web, diseño gráfico</p>
-        <p class="mt0 mb1">nov.2016 • ene.2020 • Elche</p>
+        <p class="mt0  mb2">nov.2016 • ene.2020 • Elche</p>
       </n-grid-item>
 
       <n-grid-item>
         <p class="mb0 mt1"><b>3dids.com</b></p>
         <p class="mt0 mb0">Desarrollo front-end</p>
-        <p class="mt0">mar.2016 • nov.2016 • Alicante</p>
+        <p class="mt0 mb2">mar.2016 • nov.2016 • Alicante</p>
 
         <p class="mb0"><b>Fractal Internet Consultancy</b></p>
         <p class="mt0 mb0">Desarrollo web y diseño gráfico/web</p>
-        <p class="mt0">jun.2012 • oct.2015 • Madrid (remoto)</p>
+        <p class="mt0 mb2">jun.2012 • oct.2015 • Madrid (remoto)</p>
 
         <p class="mb0"><b>Baluarte Comunicación, S.L.</b></p>
         <p class="mt0 mb0">Desarrollo web y diseño gráfico</p>
-        <p class="mt0">may.2009 • nov.2012 • Santa Pola</p>
+        <p class="mt0 mb2">may.2009 • nov.2012 • Santa Pola</p>
 
         <p class="mb0"><b>MASA International</b></p>
         <p class="mt0 mb0">Diseñador Gráfico (encargado dept.)</p>
-        <p class="mt0 mb1">jun.2005 • sept.2008 • Torrevieja</p>
+        <p class="mt0  mb2">jun.2005 • sept.2008 • Torrevieja</p>
       </n-grid-item>
 
 
       <n-grid-item>
         <p class="mb0 mt1"><b>Imprenta Hnos. Rastoll</b></p>
         <p class="mt0 mb0">Diseñador Gráfico, artefinalista</p>
-        <p class="mt0">dic.2003 • oct.2005 • Santa Pola</p>
+        <p class="mt0 mb2">dic.2003 • oct.2005 • Santa Pola</p>
 
         <p class="mb0"><b>Cartel Rotulación, S.L.</b></p>
         <p class="mt0 mb0">Diseño para exteriores, rotulación e impresión</p>
-        <p class="mt0">feb.2000 • abr.2003 • Alicante</p>
+        <p class="mt0 mb2">feb.2000 • abr.2003 • Alicante</p>
 
         <p class="mb0"><b>Rusan Copy, S.L (CopyFlash)</b></p>
         <p class="mt0 mb0">Diseño para exteriores, rotulación e impresión</p>
-        <p class="mt0">ene.1993 • ene.2000 • Alicante</p>
+        <p class="mt0 mb2">ene.1993 • ene.2000 • Alicante</p>
       </n-grid-item>
     </n-grid>
 
