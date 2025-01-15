@@ -15,6 +15,14 @@ let startBlockX = 0
 let startBlockY = 0
 let endBlockX = 0
 let endBlockY = 0
+interface PointerEvent {
+  clientX: number;
+  clientY: number;
+}
+interface TouchCoordinates {
+  clientX: number;
+  clientY: number;
+}
 
 interface GridObject {
   startX: number;
@@ -44,23 +52,39 @@ onMounted(() => {
 })
 
 
+const isTouchDevice = ref(false)
+const isDrawing = ref(false)
+
 const handleTouchStart = (event: TouchEvent) => {
-  event.preventDefault() // Prevenir comportamiento por defecto
-  document.body.classList.add('no-scroll') // Agregar clase
-  handleMouseDown(event.touches[0])
-}
-const handleTouchMove = (event: TouchEvent) => {
-  event.preventDefault() // Prevenir comportamiento por defecto
-  handleMouseMove(event.touches[0])
+  event.preventDefault()
+  const touch = event.touches[0]
+  const coordinates: TouchCoordinates = {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  }
+
+  document.documentElement.classList.add('touch-drawing')
+  document.body.classList.add('touch-drawing')
+
+  if (gridObject.startX == 0 && gridRef.value) {
+    const rect = gridRef.value.getBoundingClientRect()
+    const x = coordinates.clientX - rect.left
+    const y = coordinates.clientY - rect.top
+    rectangle.x = x
+    rectangle.y = y
+    rectangle.isDrawing = true
+  }
 }
 
 
 const handleTouchEnd = () => {
-  document.body.classList.remove('no-scroll') // Remover clase
+  document.documentElement.classList.remove('touch-drawing')
+  document.body.classList.remove('touch-drawing')
   handleMouseUp()
 }
 
-const handleMouseDown = (event: Touch) => {
+
+const handleMouseDown = (event: PointerEvent) => {
   if (gridObject.startX == 0 && gridRef.value) {
     const rect = gridRef.value.getBoundingClientRect()
     const x = event.clientX - rect.left
@@ -72,7 +96,16 @@ const handleMouseDown = (event: Touch) => {
 }
 
 
-const handleMouseMove = (event: Touch) => {
+
+const handleTouchMove = (event: TouchEvent) => {
+  if (!rectangle.isDrawing) return
+  event.preventDefault()
+
+  const touch = event.touches[0]
+  const coordinates: TouchCoordinates = {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  }
 
   if (rectangle.isDrawing && gridRef.value && gridObject.startX == 0) {
     const gridWidth = gridRef.value.offsetWidth
@@ -80,15 +113,14 @@ const handleMouseMove = (event: Touch) => {
     const blockWidth = gridWidth / columns.value
     const blockHeight = gridHeight / rows.value
     const rect = gridRef.value.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
+    const x = coordinates.clientX - rect.left
+    const y = coordinates.clientY - rect.top
     rectangle.w = x - rectangle.x
     rectangle.h = y - rectangle.y
 
     draw(blockWidth, blockHeight)
   }
 }
-
 const draw = useThrottleFn((blockWidth: number, blockHeight: number) => {
   if (gridObject.startX == 0) {
     startBlockX = Math.floor(rectangle.x / blockWidth)
@@ -128,23 +160,29 @@ const decreaseGutter = () => {
   }
 }
 
+
+const navigateToCV = () => {
+  document.documentElement.classList.remove('touch-drawing')
+  document.body.classList.remove('touch-drawing')
+  window.location.href = '/cvgvsm/cv'
+}
 </script>
 
 <template>
   <div>
-    <h2 class="center mb0" style="font-weight: 300">Guillermo Valentín Sánchez </h2>
+    <h2 class="center mb0" style="font-weight: 300; font-size: 1.3em">Guillermo Valentín Sánchez </h2>
     <h3 class="center font-weight-light mt1" style="font-weight: 400"> Desarrollador front end</h3>
 
-    <h2 class="center" style="font-weight: 200">Por favor, dibuje un recuadro en la rejilla para acceder al currículum.</h2>
+    <h2 class="center" style="font-weight: 200; font-size: 1.2em">Por favor, dibuje un recuadro en la rejilla para acceder al currículum.</h2>
 
     <div class="appGrid"
          ref="gridRef"
          @mousedown="handleMouseDown"
          @mousemove="handleMouseMove"
          @mouseup="handleMouseUp"
-         @touchstart.prevent="handleTouchStart"
-         @touchmove.prevent="handleTouchMove"
-         @touchend="handleTouchEnd"
+         @touchstart.prevent.stop="handleTouchStart"
+         @touchmove.prevent.stop="handleTouchMove"
+         @touchend.prevent.stop="handleTouchEnd"
          :style="{
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
         gridTemplateRows: `repeat(${rows}, 1fr)`,
@@ -159,9 +197,9 @@ const decreaseGutter = () => {
                    gridRow: `${gridObject.startY + 1} / ${gridObject.endY + 2}`,
                    border: '1px solid #fff', borderRadius: '4px' }">
         <div class="flex items-center justify-center" style="height: 100%">
-          <RouterLink to="/cv">
-            <n-button>Ver currículum</n-button>
-          </RouterLink>
+          <n-button @click="navigateToCV" style="position: relative; z-index: 2;">
+            Ver currículum
+          </n-button>
         </div>
 
       </div>
