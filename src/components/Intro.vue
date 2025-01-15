@@ -45,19 +45,20 @@ onMounted(() => {
 
 
 const handleTouchStart = (event: TouchEvent) => {
-  document.body.style.overflow = 'hidden'
+  event.preventDefault() // Prevenir comportamiento por defecto
+  document.body.classList.add('no-scroll') // Agregar clase
   handleMouseDown(event.touches[0])
 }
-
 const handleTouchMove = (event: TouchEvent) => {
+  event.preventDefault() // Prevenir comportamiento por defecto
   handleMouseMove(event.touches[0])
 }
 
+
 const handleTouchEnd = () => {
-  document.body.style.overflow = 'auto'
+  document.body.classList.remove('no-scroll') // Remover clase
   handleMouseUp()
 }
-
 
 const handleMouseDown = (event: Touch) => {
   if (gridObject.startX == 0 && gridRef.value) {
@@ -136,12 +137,13 @@ const decreaseGutter = () => {
 
     <h2 class="center" style="font-weight: 200">Por favor, dibuje un recuadro en la rejilla para acceder al currículum.</h2>
 
-    <div class="appGrid" ref="gridRef"
+    <div class="appGrid"
+         ref="gridRef"
          @mousedown="handleMouseDown"
          @mousemove="handleMouseMove"
          @mouseup="handleMouseUp"
-         @touchstart="handleTouchStart"
-         @touchmove="handleTouchMove"
+         @touchstart.prevent="handleTouchStart"
+         @touchmove.prevent="handleTouchMove"
          @touchend="handleTouchEnd"
          :style="{
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
