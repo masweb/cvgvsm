@@ -1,244 +1,215 @@
 <script lang="ts" setup>
-import { ref, reactive, onMounted } from 'vue'
-import { useThrottleFn } from '@vueuse/core'
-import { NButton } from 'naive-ui'
-import { MouseIcon, SquareIcon, PlusIcon, MinusIcon } from 'vue-tabler-icons'
+import { onMounted } from 'vue'
 
-const columns = ref(48)
-const rows = ref(48)
-
-let blocks = reactive(new Array(columns.value * rows.value))
-const gutter = ref(1)
-const rectangle = reactive<{ x: number, y: number, w: number, h: number, isDrawing: boolean }>({ x: 0, y: 0, w: 0, h: 0, isDrawing: false })
-const gridRef = ref(null as HTMLDivElement | null)
-let startBlockX = 0
-let startBlockY = 0
-let endBlockX = 0
-let endBlockY = 0
-interface PointerEvent {
-  clientX: number;
-  clientY: number;
-}
-interface TouchCoordinates {
-  clientX: number;
-  clientY: number;
-}
-
-interface GridObject {
-  startX: number;
-  startY: number;
-  endX: number;
-  endY: number;
-  rect: {
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-    isDrawing: boolean;
-  };
-}
-let selectedBlocks = reactive<number[]>([])
-let gridObject: GridObject = reactive({
-  startX: 0,
-  startY: 0,
-  endX: 0,
-  endY: 0,
-  rect: { x: 0, y: 0, w: 0, h: 0, isDrawing: false },
-});
-
+import { NGrid, NGridItem } from 'naive-ui'
 
 onMounted(() => {
   document.title = 'CV. Guillermo Valentín Sánchez'
 })
 
-
-const isTouchDevice = ref(false)
-const isDrawing = ref(false)
-
-const handleTouchStart = (event: TouchEvent) => {
-  event.preventDefault()
-  const touch = event.touches[0]
-  const coordinates: TouchCoordinates = {
-    clientX: touch.clientX,
-    clientY: touch.clientY
-  }
-
-  document.documentElement.classList.add('touch-drawing')
-  document.body.classList.add('touch-drawing')
-
-  if (gridObject.startX == 0 && gridRef.value) {
-    const rect = gridRef.value.getBoundingClientRect()
-    const x = coordinates.clientX - rect.left
-    const y = coordinates.clientY - rect.top
-    rectangle.x = x
-    rectangle.y = y
-    rectangle.isDrawing = true
-  }
-}
-
-
-const handleTouchEnd = () => {
-  document.documentElement.classList.remove('touch-drawing')
-  document.body.classList.remove('touch-drawing')
-  handleMouseUp()
-}
-
-
-const handleMouseDown = (event: PointerEvent) => {
-  if (gridObject.startX == 0 && gridRef.value) {
-    const rect = gridRef.value.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
-    rectangle.x = x
-    rectangle.y = y
-    rectangle.isDrawing = true
-  }
-}
-
-
-
-const handleTouchMove = (event: TouchEvent) => {
-  if (!rectangle.isDrawing) return
-  event.preventDefault()
-
-  const touch = event.touches[0]
-  const coordinates: TouchCoordinates = {
-    clientX: touch.clientX,
-    clientY: touch.clientY
-  }
-
-  if (rectangle.isDrawing && gridRef.value && gridObject.startX == 0) {
-    const gridWidth = gridRef.value.offsetWidth
-    const gridHeight = gridRef.value.offsetHeight
-    const blockWidth = gridWidth / columns.value
-    const blockHeight = gridHeight / rows.value
-    const rect = gridRef.value.getBoundingClientRect()
-    const x = coordinates.clientX - rect.left
-    const y = coordinates.clientY - rect.top
-    rectangle.w = x - rectangle.x
-    rectangle.h = y - rectangle.y
-
-    draw(blockWidth, blockHeight)
-  }
-}
-const draw = useThrottleFn((blockWidth: number, blockHeight: number) => {
-  if (gridObject.startX == 0) {
-    startBlockX = Math.floor(rectangle.x / blockWidth)
-    startBlockY = Math.floor(rectangle.y / blockHeight)
-    endBlockX = Math.floor((rectangle.x + rectangle.w) / blockWidth)
-    endBlockY = Math.floor((rectangle.y + rectangle.h) / blockHeight)
-    selectedBlocks = []
-
-    for (let i = startBlockY; i <= endBlockY; i++) {
-      for (let j = startBlockX; j <= endBlockX; j++) {
-        selectedBlocks.push(i * columns.value + j)
-      }
-    }
-  }
-}, 100)
-
-const handleMouseUp = () => {
-  if (gridObject.startX == 0 && selectedBlocks.length > 6) {
-    rectangle.isDrawing = false
-    gridObject = { startX: startBlockX, startY: startBlockY, endX: endBlockX, endY: endBlockY, rect: { ...rectangle } }
-    const blocksUsed = (endBlockX - startBlockX + 1) * (endBlockY - startBlockY + 1)
-    blocks.splice(0, blocksUsed)
-    selectedBlocks.length = 0
-  } else {
-    selectedBlocks.length = 0
-    rectangle.isDrawing = false
-  }
-}
-
-const increaseGutter = () => {
-  gutter.value++
-}
-
-const decreaseGutter = () => {
-  if (gutter.value > 1) {
-    gutter.value--
-  }
-}
-
-
-const navigateToCV = () => {
-  document.documentElement.classList.remove('touch-drawing')
-  document.body.classList.remove('touch-drawing')
-  window.location.href = '/cvgvsm/cv'
-}
 </script>
 
 <template>
-  <div>
-    <h2 class="center mb0" style="font-weight: 300; font-size: 1.3em">Guillermo Valentín Sánchez </h2>
-    <h3 class="center font-weight-light mt1" style="font-weight: 400"> Desarrollador front end</h3>
 
-    <h2 class="center" style="font-weight: 200; font-size: 1.2em">Por favor, dibuje un recuadro en la rejilla para acceder al currículum.</h2>
-
-    <div class="appGrid"
-         ref="gridRef"
-         @mousedown="handleMouseDown"
-         @mousemove="handleMouseMove"
-         @mouseup="handleMouseUp"
-         @touchstart.prevent.stop="handleTouchStart"
-         @touchmove.prevent.stop="handleTouchMove"
-         @touchend.prevent.stop="handleTouchEnd"
-         :style="{
-        gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gridTemplateRows: `repeat(${rows}, 1fr)`,
-        gridGap: `${gutter}px` }">
-
-      <div v-for="(block, index) in blocks" :key="index" class="gridBlock"
-           :class="{ 'selected': selectedBlocks.includes(index) }">
-        {{ block }}
-      </div>
-
-      <div v-if="gridObject.startX!=0" :style="{ gridColumn: `${gridObject.startX + 1} / ${gridObject.endX + 2}`,
-                   gridRow: `${gridObject.startY + 1} / ${gridObject.endY + 2}`,
-                   border: '1px solid #fff', borderRadius: '4px' }">
-        <div class="flex items-center justify-center" style="height: 100%">
-          <n-button @click="navigateToCV" style="position: relative; z-index: 2;">
-            Ver currículum
-          </n-button>
+  <div class="container mb5">
+    <n-grid class="mt3" cols="1 s:1 m:2 " x-gap="10" responsive="screen">
+      <n-grid-item>
+        <div class="flex justify-end">
+          <img class="pic" src="/pic.jpeg" />
         </div>
+      </n-grid-item>
+      <n-grid-item class="letter">
+        <div><strong>Guillermo Valentín Sánchez</strong></div>
+        <p class="mt0 mb0"><strong>Desarrollador front end senior</strong></p>
+        <p class="mt0 mb0"><strong>Diseñador gráfico</strong></p>
+        <p class="mt0">nacimiento: 1973</p>
+        <p class="text">Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad, como diseñador gráfico, aunque ahora ya no ejerzo,
+          definitivamente esa
+          experiencia es muy útil para realizar de manera óptima mis tareas como maquetador web y desarrollador front-end.</p>
+        <p class="text">Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, llevo codificando profesionalmente desde 2012. Transicioné el
+          paso de
+          jQuery para todo, a <strong>JavaScript moderno</strong> en entornos profesionales. </p>
+        <p class="text">Soy una persona <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a> con altas
+          capacidades, utilizo el proceso intensivo, capacidad de análisis, cuidado de los detalles... para prácticamente todo, puedo comprender, aprender y abordar
+          temáticas complejas en todos los ámbitos en muy poco tiempo.</p>
+        <p class="text">En los últimos años he sido partícipe en un porcentaje muy alto en un proyecto realmente grande para gestión de eventos donde he ideado
+          y producido un editor web desde 0 totalmente operativo, esto me ha permitido llevar las tecnologías al límite y conocer los mejores métodos, técnicas y librerías
+          para desarrollo front-end, además de habituarme al trabajo en equipo con <strong>Jira</strong>, <strong>Git Flow</strong>.</p>
+        <p class="text">Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en <strong>Vue</strong> 3, <strong>Typescript</strong> y
+          <strong>Nuxt</strong> 3
+          al realizar una gran cantidad de proyectos profesionales en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta
+          facilidad proyectos de <strong>React</strong> y <strong>Angular</strong>.</p>
+        <p class="text">Además, en los últimos tiempos estoy realizando proyectos backend en GO, estupendo lenguaje para realización de proyectos de alto rendimiento,
+          escalable, seguro y de desarrollo rápido.</p>
 
-      </div>
+        <p class="text"><strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>, <strong>buenas prácticas</strong>, <strong>código
+          legible y mantenible</strong>, <strong>patrones de diseño</strong>, <strong>pruebas unitarias</strong> y <strong>end to end</strong>
+          . Configuración y manejo de <strong>Git</strong>, <strong>GitHub</strong>, <strong>GitLab</strong>, <strong>Docker</strong>, <strong>IA para programar</strong>. <strong>Usabilidad</strong>, <strong>interfaces gráficas</strong>,
+          <strong>WYSIWYG</strong>,
+          <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>, <strong>SCSS</strong> 12 años experiencia.</p>
+        <p class="text">Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS. Comercio electrónico, backoffices
+          personalizados, aplicaciones móviles y de escritorio. Interesado en el la publicación de IA para usuario final, WASM y GO.</p>
+      </n-grid-item>
 
-    </div>
+    </n-grid>
 
 
-    <div class="flex justify-center mt-4">
-      <div class="flex  ml-3">
-        <div class="flex flex-column mt1">
-          <n-button size="tiny" @click="increaseGutter">
-            <PlusIcon stroke-width="1" size="16" />
-          </n-button>
-          <n-button size="tiny" @click="decreaseGutter">
-            <MinusIcon stroke-width="1" size="16" />
-          </n-button>
-        </div>
+    <n-grid class="mt0" cols="1 s:1 m:2 " x-gap="10" responsive="screen">
 
-        <div class="flex  mt1">
-          <MouseIcon stroke-width=".4" size="44" />
-          <div class="cifra mt3">
-            <div>x: {{ Math.ceil(rectangle.x) }}</div>
-            <div>y: {{ Math.ceil(rectangle.y) }}</div>
-            <div>w: {{ Math.ceil(rectangle.w) }}</div>
-            <div>h: {{ Math.ceil(rectangle.h) }}</div>
-          </div>
-        </div>
-        <div class="flex  mt1">
+      <n-grid-item>
+        <h3 class="mb0"><strong>Formación</strong></h3>
+        <p class="mb0"><b>Centro de estudios de informática superior Alicante.</b></p>
+        <p class="mt0">Programador de gestión - Analista programador 1990 – 1992. </p>
 
-          <SquareIcon stroke-width=".4" size="44" />
-          <div class="cifra">
-            <div>x: {{ startBlockX }}</div>
-            <div>y: {{ startBlockY }}</div>
-            <div>x: {{ endBlockX }}</div>
-            <div>y: {{ endBlockY }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+      </n-grid-item>
+      <n-grid-item>
+        <h3 class="mb2"><strong>Autodidacta</strong></h3>
+        <p class="mt0">Mi formación se basa en el seguimiento, testeo y aprendizage mediante artículos, cursos, libros, etc...
+          de todas las tecnologías susceptibles de mejorar la eficiencia en el desarrollo de software. </p>
+        <h3 class="mb0"><strong>Inglés</strong></h3>
+        <p class="mb0">Leo y es escribo pero no hablo ni entiendo con facilidad.</p>
+      </n-grid-item>
+
+    </n-grid>
+
+
+    <h3 class="mt3 mb0"><strong>Experiencia</strong></h3>
+
+
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+
+      <n-grid-item>
+        <p class="mb0"><b>Bmotion</b></p>
+        <p class="mt0 mb0">Desarrollo aplicaciones nocode</p>
+        <p class="mt0 mb2">may.2022 • Actualidad • Madrid (remoto)</p>
+
+        <p class="mb0"><b>Indexeo Marketing</b></p>
+        <p class="mt0 mb0">Desarrollo web, mantenimiento</p>
+        <p class="mt0 mb2">ene.2021 • mayo 2022 • Ibi (remoto)</p>
+
+        <p class="mb0"><b>Por cuenta propia</b></p>
+        <p class="mt0 mb0">Desarrollo web, diseño gráfico/web</p>
+        <p class="mt0 mb2">ene.2020 • ene.2021 • Santa Pola</p>
+
+        <p class="mb0"><b>NovoSpain</b></p>
+        <p class="mt0 mb0">Desarrollo web, diseño gráfico</p>
+        <p class="mt0  mb2">nov.2016 • ene.2020 • Elche</p>
+      </n-grid-item>
+
+      <n-grid-item>
+        <p class="mb0 mt1"><b>3dids.com</b></p>
+        <p class="mt0 mb0">Desarrollo front-end</p>
+        <p class="mt0 mb2">mar.2016 • nov.2016 • Alicante</p>
+
+        <p class="mb0"><b>Fractal Internet Consultancy</b></p>
+        <p class="mt0 mb0">Desarrollo web y diseño gráfico/web</p>
+        <p class="mt0 mb2">jun.2012 • oct.2015 • Madrid (remoto)</p>
+
+        <p class="mb0"><b>Baluarte Comunicación, S.L.</b></p>
+        <p class="mt0 mb0">Desarrollo web y diseño gráfico</p>
+        <p class="mt0 mb2">may.2009 • nov.2012 • Santa Pola</p>
+
+        <p class="mb0"><b>MASA International</b></p>
+        <p class="mt0 mb0">Diseñador Gráfico (encargado dept.)</p>
+        <p class="mt0  mb2">jun.2005 • sept.2008 • Torrevieja</p>
+      </n-grid-item>
+
+
+      <n-grid-item>
+        <p class="mb0 mt1"><b>Imprenta Hnos. Rastoll</b></p>
+        <p class="mt0 mb0">Diseñador Gráfico, artefinalista</p>
+        <p class="mt0 mb2">dic.2003 • oct.2005 • Santa Pola</p>
+
+        <p class="mb0"><b>Cartel Rotulación, S.L.</b></p>
+        <p class="mt0 mb0">Diseño para exteriores, rotulación e impresión</p>
+        <p class="mt0 mb2">feb.2000 • abr.2003 • Alicante</p>
+
+        <p class="mb0"><b>Rusan Copy, S.L (CopyFlash)</b></p>
+        <p class="mt0 mb0">Diseño para exteriores, rotulación e impresión</p>
+        <p class="mt0 mb2">ene.1993 • ene.2000 • Alicante</p>
+      </n-grid-item>
+    </n-grid>
+
+    <h3 class="mt3 mb0"><strong>Habilidades</strong></h3>
+    <h3 class="mb0"><strong>Frontend</strong></h3>
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+      <n-grid-item>
+        <p class="mb2 mt2">Código mantenible y legible, convenciones de código.</p>
+        <p class="mb2 mt2">Gestión de conexión, repositorios API, fetch, ofetch, axios..</p>
+        <p class="mb2 mt2">Internacionalización.</p>
+        <p class="mb2 mt2">Persistencia de datos. IndexDB, LocalStorage, Node fs ...</p>
+        <p class="mb2 mt2">Autenticación.</p>
+        <p class="mb2 mt2">Manejo y conversión de fechas.</p>
+        <p class="mb2 mt2">Creación programática y previsualización de PDF.</p>
+        <p class="mb2 mt2">Carruseles, galerías, modal y sliders responsive, tooltips, notificaciones, arrastrar y soltar, calendario interactivo.</p>
+        <p class="mb1 mt2">Validación front-end y back-end en vivo.</p>
+      </n-grid-item>
+      <n-grid-item>
+        <p class="mb2 mt1">Marcado semántico.</p>
+        <p class="mb1 mt2">Web components, modularización, reutilización.</p>
+        <p class="mb2 mt2">Web App.</p>
+        <p class="mb2 mt2">Cookies.</p>
+        <p class="mb2 mt2">Canvas.</p>
+        <p class="mb2 mt2">Audio y video en la web.</p>
+        <p class="mb2 mt2">Pre-procesadores CSS.</p>
+        <p class="mb2 mt2">Desarrollo responsive, mobile first.</p>
+        <p class="mb2 mt2">Frameworks: Bulma, Naive-ui, Bootstrap, Fundation, Pure, UI-Kit, Skeleton...</p>
+        <p class="mb2 mt2">Tipografía web.</p>
+        <p class="mb2 mt2">Gráficos vectoriales (svg).</p>
+        <p class="mb1 mt2">Animaciones CSS.</p>
+      </n-grid-item>
+      <n-grid-item>
+        <p class="mb2 mt1">Javascript orientado a objetos.</p>
+        <p class="mb2 mt2">Javascript asíncrono.</p>
+        <p class="mb2 mt2">Estructuras de datos Json.</p>
+        <p class="mb2 mt2">TypeScript.</p>
+        <p class="mb1 mt2">Arquitectura hexagonal.</p>
+        <p class="mb2 mt2">Motores de plantillas (pug, blade, liquid...).</p>
+        <p class="mb2 mt2">Gestión de estado, Pinia.. </p>
+        <p class="mb2 mt2">Prototipado UI-UX.</p>
+        <p class="mb1 mt2">Flutter, Tauri, Electron, App híbrida, Cordova, Ionic. App nativo.</p>
+      </n-grid-item>
+    </n-grid>
+
+
+    <h3 class="mb0"><strong>Backend</strong></h3>
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+      <n-grid-item>
+        <p class="mb2 mt1">Creación de backend API Rest o con plantillas con GO/Gin, TypeScript/Adonis, PHP/Laravel</p>
+        <p class="mb2 mt1">Creación, diseño y optimización de bases de datos relacionales MySql, MariaDB, Postgress...</p>
+        <p class="mb2 mt2">Migraciones y generación de datos de prueba.</p>
+        <p class="mb2 mt2">Login y registro seguro, encriptación.</p>
+        <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor, imagen, vectorial, excel, pdf ...</p>
+      </n-grid-item>
+      <n-grid-item>
+        <p class="mb1 mt1">Paginación.</p>
+        <p class="mb2 mt2">Envío de correos automatizados.</p>
+        <p class="mb2 mt2">Creación de tareas periódicas.</p>
+        <p class="mb2 mt2">Caché en disco o memoria.</p>
+        <p class="mb1 mt2">Manejo de eventos y colas de eventos.</p>
+      </n-grid-item>
+      <n-grid-item>
+        <p class="mb2 mt1">Uso de Linux.</p>
+        <p class="mb2 mt2">Gestión de dependencias.</p>
+        <p class="mb2 mt2">Test unitarios.</p>
+        <p class="mb2 mt2">ORM Gorm, Eloquent y Lucid.</p>
+      </n-grid-item>
+    </n-grid>
+
+
   </div>
+
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+  <div class="mb5">&nbsp;</div>
+
 
 </template>
