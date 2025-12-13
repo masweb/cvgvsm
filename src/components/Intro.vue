@@ -28,14 +28,9 @@ onMounted(() => {
           maquetador web y desarrollador front-end.
         </p>
         <p class="text">
-          Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, llevo codificando profesionalmente
-          desde 2012. Transicioné el paso de jQuery para todo, a <strong>JavaScript moderno</strong> en entornos
-          profesionales.
-        </p>
-
-        <p>
-          Me considero un profesional con fuerte capacidad analítica y visión sistémica, me siento cómodo en entornos
-          que requieren procesamiento profundo de información, innovación y atención meticulosa a la calidad.
+          Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, codificando profesionalmente desde
+          2012. Me considero un profesional con fuerte capacidad analítica y visión sistémica, me siento cómodo en
+          entornos que requieren procesamiento profundo de información, innovación y atención meticulosa a la calidad.
           Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
           conceptos. Resolución creativa de problemas complejos. Perfeccionismo constructivo orientado a resultados.
           Sensibilidad para detectar necesidades no expresadas de clientes/equipos. Capacidad para procesar múltiples
