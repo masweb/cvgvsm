@@ -20,7 +20,7 @@ onMounted(() => {
         <div><strong>Guillermo Valentín Sánchez</strong></div>
         <p class="mt0 mb0">Desarrollador Full Stack.</p>
         <p class="mt0 mb0">Especialista front-end ecosistema Vue.</p>
-        <p class="mt0 mb0">Diseñador gráfico</p>
+        <p class="mt0 mb0">Diseñador gráfico.</p>
         <p class="mt0">Fecha de nacimiento: 1973</p>
         <p class="text">
           Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad, como diseñador gráfico, aunque
