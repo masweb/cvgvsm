@@ -51,7 +51,7 @@ onMounted(() => {
         </p>
 
         <p class="text">
-          Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en <strong>Vue</strong> 3,
+          Desarrollo de grandes proyectos y apps nocode, podría decir que soy experto en <strong>Vue</strong> 3,
           <strong>Typescript</strong> y <strong>Nuxt</strong> 3 al realizar una gran cantidad de proyectos profesionales
           en este ecosistema (también en las versiones 2). Podría crear y adaptarme con cierta facilidad proyectos de
           <strong>React</strong> y <strong>Angular</strong>.
@@ -60,15 +60,19 @@ onMounted(() => {
           Proyectos backend en GO/GIN, estupendos lenguaje/framework para realización de proyectos de alto rendimiento,
           escalable, seguro y de desarrollo rápido.
         </p>
-
+        <p class="text">
+          Desarrollo asistido con IA, control absoluto de lo que ocurre en mis proyectos, yo decido cómo y por qué se
+          toman deciciones de toda índole, la IA pica código y asiste, cuando no lo hago yo para no perder la
+          costumbre...
+        </p>
         <p class="text">
           <strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>,
           <strong>buenas prácticas</strong>, <strong>código legible y mantenible</strong>,
           <strong>patrones de diseño</strong>, <strong>pruebas unitarias</strong> y <strong>end to end</strong> .
           Configuración y manejo de <strong>Git</strong>, <strong>GitHub</strong>, <strong>GitLab</strong>,
-          <strong>Docker</strong>, <strong>IA para programar</strong>. <strong>Usabilidad</strong>,
-          <strong>interfaces gráficas</strong>, <strong>WYSIWYG</strong>, <strong>accesibilidad</strong>,
-          <strong>multi idioma</strong>, <strong>CSS</strong>, <strong>SCSS</strong> 12 años experiencia.
+          <strong>Docker</strong>, <strong>Usabilidad</strong>, <strong>interfaces gráficas</strong>,
+          <strong>WYSIWYG</strong>, <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>,
+          <strong>SCSS</strong> 12 años experiencia.
         </p>
         <p class="text">
           Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS. Comercio
