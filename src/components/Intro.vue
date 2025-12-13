@@ -28,13 +28,14 @@ onMounted(() => {
           maquetador web y desarrollador front-end.
         </p>
         <p class="text">
-          Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, codificando profesionalmente desde
-          2012. Me considero un profesional con fuerte capacidad analítica y visión sistémica, me siento cómodo en
-          entornos que requieren procesamiento profundo de información, innovación y atención meticulosa a la calidad.
-          Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
-          conceptos. Resolución creativa de problemas complejos. Perfeccionismo constructivo orientado a resultados.
-          Sensibilidad para detectar necesidades no expresadas de clientes/equipos. Capacidad para procesar múltiples
-          variables simultáneamente en la toma de decisiones. Pensamiento estratégico y visión holística.
+          Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, codificando profesionalmente
+          <strong>desde 2012</strong> . Me considero un profesional con fuerte capacidad analítica y visión sistémica,
+          me siento cómodo en entornos que requieren procesamiento profundo de información, innovación y atención
+          meticulosa a la calidad. Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para establecer
+          conexiones no evidentes entre conceptos. Resolución creativa de problemas complejos. Perfeccionismo
+          constructivo orientado a resultados. Sensibilidad para detectar necesidades no expresadas de clientes/equipos.
+          Capacidad para procesar múltiples variables simultáneamente en la toma de decisiones. Pensamiento estratégico
+          y visión holística.
         </p>
 
         <p class="text">
@@ -52,13 +53,13 @@ onMounted(() => {
           <strong>React</strong> y <strong>Angular</strong>.
         </p>
         <p class="text">
-          Proyectos backend en GO/GIN, estupendos lenguaje/framework para realización de proyectos de alto rendimiento,
-          escalable, seguro y de desarrollo rápido.
+          <strong>Proyectos backend</strong> en GO/GIN, estupendos lenguaje/framework para realización de proyectos de
+          alto rendimiento, escalable, seguro y de desarrollo rápido.
         </p>
         <p class="text">
-          Desarrollo asistido con IA, control absoluto de lo que ocurre en mis proyectos, yo decido cómo y por qué se
-          toman deciciones de toda índole, la IA pica código y asiste, cuando no lo hago yo para no perder la
-          costumbre...
+          <strong>Desarrollo asistido por IA</strong>, control absoluto de lo que ocurre en mis proyectos, yo decido
+          cómo y por qué se toman deciciones de toda índole, la IA pica código y asiste, cuando no lo hago yo para no
+          perder la costumbre...
         </p>
         <p class="text">
           <strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>,
@@ -74,6 +75,7 @@ onMounted(() => {
           electrónico, backoffices personalizados, aplicaciones móviles y de escritorio. Interesado en el la publicación
           de IA para usuario final, WASM y GO.
         </p>
+        <p class="text">Deploy, Docker, integración contínua, diferentes plataformas.</p>
       </n-grid-item>
     </n-grid>
 
@@ -157,11 +159,10 @@ onMounted(() => {
         <p class="mb2 mt2">Internacionalización.</p>
         <p class="mb2 mt2">Persistencia de datos. IndexDB, LocalStorage, Node fs ...</p>
         <p class="mb2 mt2">Autenticación.</p>
-        <p class="mb2 mt2">Manejo y conversión de fechas.</p>
         <p class="mb2 mt2">Creación programática y previsualización de PDF.</p>
         <p class="mb2 mt2">
-          Carruseles, galerías, modal y sliders responsive, tooltips, notificaciones, arrastrar y soltar, calendario
-          interactivo.
+          Arrastrar y soltar, sliders, galerías, modal y sliders responsive, tooltips, notificaciones, calendario
+          interactivo, nivel de personalización extremo.
         </p>
         <p class="mb1 mt2">Validación front-end y back-end en vivo.</p>
       </n-grid-item>
@@ -188,7 +189,7 @@ onMounted(() => {
         <p class="mb2 mt2">Motores de plantillas (pug, blade, liquid...).</p>
         <p class="mb2 mt2">Gestión de estado, Pinia..</p>
         <p class="mb2 mt2">Prototipado UI-UX.</p>
-        <p class="mb1 mt2">Flutter, Tauri, Electron, App híbrida, Cordova, Ionic. App nativo.</p>
+        <p class="mb1 mt2">Tauri, Electron, App híbrida, Ionic. App nativa.</p>
       </n-grid-item>
     </n-grid>
 
@@ -204,7 +205,6 @@ onMounted(() => {
         <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor, imagen, vectorial, excel, pdf ...</p>
       </n-grid-item>
       <n-grid-item>
-        <p class="mb1 mt1">Paginación.</p>
         <p class="mb2 mt2">Envío de correos automatizados.</p>
         <p class="mb2 mt2">Creación de tareas periódicas.</p>
         <p class="mb2 mt2">Caché en disco o memoria.</p>

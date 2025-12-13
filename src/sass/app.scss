@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
 @import '../../node_modules/basscss/css/basscss.css';
 
-html, body {
-  font-family: 'Lora';
+html,
+body {
+  font-family: 'STIX Two Text', serif;
   font-style: italic;
   -webkit-font-smoothing: antialiased; /* Para Chrome, Safari */
   -moz-osx-font-smoothing: grayscale; /* Para Firefox */
   text-rendering: optimizeLegibility; /* Mejora la legibilidad del texto en navegadores */
-  font-size: 20px;
+  font-size: 1.2em;
 }
 
-html.dark, html.dark body {
+html.dark,
+html.dark body {
   color: #ddd;
   background: #222;
-
 }
 
-
-.html, body {
+.html,
+body {
   background: #eee;
   color: #555;
 }
@@ -27,7 +28,6 @@ a {
   color: #0a89bf !important;
   text-decoration: none;
 }
-
 
 .touch-drawing {
   position: fixed;
@@ -58,7 +58,7 @@ html.dark {
   background: #222;
   color: #ddd;
   a {
-    color: #d50a80!important;
+    color: #d50a80 !important;
   }
   .toggle {
     background-color: #ddd;
@@ -75,9 +75,7 @@ html.dark {
   }
 }
 .letter {
-
-   margin-top: 30px;
-
+  margin-top: 30px;
 }
 .pic {
   border-radius: 60px;
@@ -85,16 +83,16 @@ html.dark {
 }
 
 @media (min-width: 768px) {
- .pic {
-   max-width: 300px;
-   margin-right: 30px;
- }
+  .pic {
+    max-width: 300px;
+    margin-right: 30px;
+  }
   .letter {
     font-size: 1em;
     margin-top: 0px;
   }
 }
-    .toggle {
+.toggle {
   position: fixed;
   right: 10px;
   top: 10px;
@@ -139,6 +137,4 @@ html.dark {
     aspect-ratio: 1 / 1;
     border-radius: 2px;
   }
-
-
 }
