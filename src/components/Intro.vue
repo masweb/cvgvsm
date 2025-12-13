@@ -18,9 +18,10 @@ onMounted(() => {
       </n-grid-item>
       <n-grid-item class="letter">
         <div><strong>Guillermo Valentín Sánchez</strong></div>
-        <p class="mt0 mb0"><strong>Desarrollador front end senior</strong></p>
-        <p class="mt0 mb0"><strong>Diseñador gráfico</strong></p>
-        <p class="mt0">nacimiento: 1973</p>
+        <p class="mt0 mb0">Desarrollador Full Stack.</p>
+        <p class="mt0 mb0">Especialista front-end ecosistema Vue.</p>
+        <p class="mt0 mb0">Diseñador gráfico</p>
+        <p class="mt0">Fecha de nacimiento: 1973</p>
         <p class="text">
           Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad, como diseñador gráfico, aunque
           ahora ya no ejerzo, definitivamente esa experiencia es muy útil para realizar de manera óptima mis tareas como
@@ -31,19 +32,24 @@ onMounted(() => {
           desde 2012. Transicioné el paso de jQuery para todo, a <strong>JavaScript moderno</strong> en entornos
           profesionales.
         </p>
-        <p class="text">
-          Soy una persona
-          <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a> con
-          altas capacidades, utilizo el proceso intensivo, capacidad de análisis, cuidado de los detalles... para
-          prácticamente todo, puedo comprender, aprender y abordar temáticas complejas en todos los ámbitos en muy poco
-          tiempo.
+
+        <p>
+          Me considero un profesional con fuerte capacidad analítica y visión sistémica, me siento cómodo en entornos
+          que requieren procesamiento profundo de información, innovación y atención meticulosa a la calidad.
+          Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
+          conceptos. Resolución creativa de problemas complejos. Perfeccionismo constructivo orientado a resultados.
+          Sensibilidad para detectar necesidades no expresadas de clientes/equipos. Capacidad para procesar múltiples
+          variables simultáneamente en la toma de decisiones. Pensamiento estratégico y visión holística.
         </p>
+
         <p class="text">
           En los últimos años he sido partícipe en un porcentaje muy alto en un proyecto realmente grande para gestión
-          de eventos donde he ideado y producido un editor web desde 0 totalmente operativo, esto me ha permitido llevar
-          las tecnologías al límite y conocer los mejores métodos, técnicas y librerías para desarrollo front-end,
-          además de habituarme al trabajo en equipo con <strong>Jira</strong>, <strong>Git Flow</strong>.
+          de eventos donde entre otras cosas, he ideado y producido un editor web desde 0 totalmente operativo, esto me
+          ha permitido llevar las tecnologías al límite y conocer los mejores métodos, técnicas y librerías para
+          desarrollo front-end, además de habituarme al trabajo en equipo con <strong>Jira</strong>,
+          <strong>Git Flow</strong>.
         </p>
+
         <p class="text">
           Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en <strong>Vue</strong> 3,
           <strong>Typescript</strong> y <strong>Nuxt</strong> 3 al realizar una gran cantidad de proyectos profesionales
@@ -51,8 +57,8 @@ onMounted(() => {
           <strong>React</strong> y <strong>Angular</strong>.
         </p>
         <p class="text">
-          Además, en los últimos tiempos estoy realizando proyectos backend en GO, estupendo lenguaje para realización
-          de proyectos de alto rendimiento, escalable, seguro y de desarrollo rápido.
+          Proyectos backend en GO/GIN, estupendos lenguaje/framework para realización de proyectos de alto rendimiento,
+          escalable, seguro y de desarrollo rápido.
         </p>
 
         <p class="text">

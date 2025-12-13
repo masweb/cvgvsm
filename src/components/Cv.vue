@@ -31,13 +31,16 @@ onMounted(() => {
           desde 2012. Transicioné el paso de jQuery para todo, a <strong>JavaScript moderno</strong> en entornos
           profesionales.
         </p>
-        <p class="text">
-          Soy una persona
-          <a target="_blank" href="https://es.wikipedia.org/wiki/Sensibilidad_de_procesamiento_sensorial">SPS</a> con
-          altas capacidades, utilizo el proceso intensivo, capacidad de análisis, cuidado de los detalles... para
-          prácticamente todo, puedo comprender, aprender y abordar temáticas complejas en todos los ámbitos en muy poco
-          tiempo.
+
+        <p>
+          Me considero un profesional con fuerte capacidad analítica y visión sistémica, me siento cómodo en entornos
+          que requieren procesamiento profundo de información, innovación y atención meticulosa a la calidad.
+          Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
+          conceptos. Resolución creativa de problemas complejos. Perfeccionismo constructivo orientado a resultados.
+          Sensibilidad para detectar necesidades no expresadas de clientes/equipos. Capacidad para procesar múltiples
+          variables simultáneamente en la toma de decisiones. Pensamiento estratégico y visión holística.
         </p>
+
         <p class="text">
           En los últimos años he sido partícipe en un porcentaje muy alto en un proyecto realmente grande para gestión
           de eventos donde he ideado y producido un editor web desde 0 totalmente operativo, esto me ha permitido llevar
