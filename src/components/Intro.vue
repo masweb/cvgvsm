@@ -10,16 +10,16 @@ onMounted(() => {
 
 <template>
   <div class="container mb5">
-    <n-grid class="mt3" cols="1 s:1 m:2 " x-gap="10" responsive="screen">
+    <n-grid class="mt2" cols="1 s:2 m:2" x-gap="10" responsive="screen">
       <n-grid-item>
         <div class="flex justify-end">
           <img class="pic" src="/IMG_4663RED.png" />
         </div>
       </n-grid-item>
       <n-grid-item class="letter">
-        <div><strong>Guillermo Valentín Sánchez</strong></div>
-        <p class="mt0 mb0">Desarrollador Full Stack.</p>
-        <p class="mt0 mb0">Especialista front-end ecosistema Vue.</p>
+        <h3><strong>Guillermo Valentín Sánchez</strong></h3>
+        <p class="mt0 mb0"><strong>Desarrollador Full Stack.</strong></p>
+        <p class="mt0 mb0"><strong>Especialista front-end ecosistema Vue.</strong></p>
         <p class="mt0 mb0">Diseñador gráfico.</p>
         <p class="mt0">Fecha de nacimiento: 1973</p>
         <p class="text">
@@ -27,6 +27,10 @@ onMounted(() => {
           ahora ya no ejerzo, definitivamente esa experiencia es muy útil para realizar de manera óptima mis tareas como
           maquetador web y desarrollador front-end.
         </p>
+      </n-grid-item>
+    </n-grid>
+    <n-grid class="mt0" cols="1 s:1 m:2 " x-gap="10" responsive="screen">
+      <n-grid-item>
         <p class="text">
           Soy entusiasta de las tecnologías y desarrollo de software y autodidacta, codificando profesionalmente
           <strong>desde 2012</strong> . Me considero un profesional con fuerte capacidad analítica y visión sistémica,
@@ -56,22 +60,25 @@ onMounted(() => {
           <strong>Proyectos backend</strong> en GO/GIN, estupendos lenguaje/framework para realización de proyectos de
           alto rendimiento, escalable, seguro y de desarrollo rápido.
         </p>
-
+      </n-grid-item>
+      <n-grid-item>
         <p class="text">
           <strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>,
           <strong>buenas prácticas</strong>, <strong>código legible y mantenible</strong>,
           <strong>patrones de diseño</strong>, <strong>pruebas unitarias</strong> y <strong>end to end</strong> .
           Configuración y manejo de <strong>Git</strong>, <strong>GitHub</strong>, <strong>GitLab</strong>,
           <strong>Docker</strong>, <strong>Usabilidad</strong>, <strong>interfaces gráficas</strong>,
-          <strong>WYSIWYG</strong>, <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>,
-          <strong>SCSS</strong> 12 años experiencia.
+          <strong>WYSIWYG</strong>, <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>
+          18 años experiencia.
         </p>
         <p class="text">
-          Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis JS. Comercio
-          electrónico, backoffices personalizados, aplicaciones móviles y de escritorio. Interesado en el la publicación
-          de IA para usuario final, WASM y GO.
+          Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript - Adonis / Express /
+          Nitro.... Comercio electrónico, backoffices personalizados, aplicaciones móviles y de escritorio. Wordpress,
+          PrestaShop, Shopify.
         </p>
-        <p class="text">Deploy, Docker, integración contínua, diferentes plataformas.</p>
+        <p class="text">
+          Deploy, Docker, Docker: diseño de infraestructuras, integración contínua, diferentes plataformas.
+        </p>
 
         <h3 class="mb2"><strong>Inteligencia artificial</strong></h3>
 
@@ -109,11 +116,11 @@ onMounted(() => {
 
     <h3 class="mt3 mb0"><strong>Experiencia</strong></h3>
 
-    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="20" responsive="screen">
       <n-grid-item>
         <p class="mb0"><b>Bmotion</b></p>
         <p class="mt0 mb0">Desarrollo aplicaciones nocode</p>
-        <p class="mt0 mb2">may.2022 • Actualidad • Madrid (remoto)</p>
+        <p class="mt0 mb2">may.2022 • dic.2025 • Madrid (remoto)</p>
 
         <p class="mb0"><b>Indexeo Marketing</b></p>
         <p class="mt0 mb0">Desarrollo web, mantenimiento</p>
@@ -163,11 +170,11 @@ onMounted(() => {
 
     <h3 class="mt3 mb0"><strong>Habilidades</strong></h3>
     <h3 class="mb0"><strong>Frontend</strong></h3>
-    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="20" responsive="screen">
       <n-grid-item>
         <p class="mb2 mt2">Código mantenible y legible, convenciones de código.</p>
         <p class="mb2 mt2">Gestión de conexión, repositorios API REST, fetch, ofetch, axios..</p>
-        <p class="mb2 mt2">Protocolos API REST, WebSockets, GraphQL</p>
+        <p class="mb2 mt2">Protocolos API REST, WebSockets, GraphQL.</p>
         <p class="mb2 mt2">Internacionalización.</p>
         <p class="mb2 mt2">Persistencia de datos. IndexDB, LocalStorage, Node fs ...</p>
         <p class="mb2 mt2">Autenticación.</p>
@@ -176,9 +183,9 @@ onMounted(() => {
           Arrastrar y soltar, sliders, galerías, modal y sliders responsive, tooltips, notificaciones, calendario
           interactivo, nivel de personalización extremo.
         </p>
-        <p class="mb1 mt2">Validación front-end y back-end en vivo.</p>
       </n-grid-item>
       <n-grid-item>
+        <p class="mb1 mt2">Validación front-end y back-end en vivo.</p>
         <p class="mb2 mt1">Marcado semántico.</p>
         <p class="mb1 mt2">Web components, modularización, reutilización.</p>
         <p class="mb2 mt2">Web App.</p>
@@ -189,10 +196,10 @@ onMounted(() => {
         <p class="mb2 mt2">Desarrollo responsive, mobile first.</p>
         <p class="mb2 mt2">Frameworks: Bulma, Naive-ui, Bootstrap, Fundation, Pure, UI-Kit, Skeleton...</p>
         <p class="mb2 mt2">Tipografía web.</p>
-        <p class="mb2 mt2">Gráficos vectoriales (svg).</p>
-        <p class="mb1 mt2">Animaciones CSS.</p>
       </n-grid-item>
       <n-grid-item>
+        <p class="mb2 mt2">Gráficos vectoriales (svg).</p>
+        <p class="mb1 mt2">Animaciones CSS.</p>
         <p class="mb2 mt1">Javascript orientado a objetos.</p>
         <p class="mb2 mt2">Javascript asíncrono.</p>
         <p class="mb2 mt2">Estructuras de datos Json.</p>
@@ -206,25 +213,28 @@ onMounted(() => {
     </n-grid>
 
     <h3 class="mb0"><strong>Backend</strong></h3>
-    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
+    <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="20" responsive="screen">
       <n-grid-item>
-        <p class="mb2 mt1">Creación de backend API Rest o con plantillas con GO/Gin, TypeScript/Adonis, PHP/Laravel</p>
         <p class="mb2 mt1">
+          Creación de backend API Rest o GraphQL, o con plantillas con GO/Gin, TypeScript/Adonis/Express/Nitro...,
+          PHP/Laravel
+        </p>
+        <p class="mb2 mt2">
           Creación, diseño y optimización de bases de datos relacionales MySql, MariaDB, Postgress...
         </p>
         <p class="mb2 mt2">Protocolos API REST, WebSockets, GraphQL, SOAP, gRPC, Webhooks</p>
-        <p class="mb2 mt2">Migraciones y generación de datos de prueba.</p>
+      </n-grid-item>
+      <n-grid-item>
+        <p class="mb2 mt1">Migraciones y generación de datos de prueba.</p>
         <p class="mb2 mt2">Login y registro seguro, encriptación.</p>
         <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor, imagen, vectorial, excel, pdf ...</p>
-      </n-grid-item>
-      <n-grid-item>
         <p class="mb2 mt2">Envío de correos automatizados.</p>
         <p class="mb2 mt2">Creación de tareas periódicas.</p>
-        <p class="mb2 mt2">Caché en disco o memoria.</p>
-        <p class="mb1 mt2">Manejo de eventos y colas de eventos.</p>
       </n-grid-item>
       <n-grid-item>
-        <p class="mb2 mt1">Uso de Linux.</p>
+        <p class="mb2 mt1">Caché en disco o memoria.</p>
+        <p class="mb1 mt2">Manejo de eventos y colas de eventos.</p>
+        <p class="mb2 mt2">Uso de Linux.</p>
         <p class="mb2 mt2">Gestión de dependencias.</p>
         <p class="mb2 mt2">Test unitarios.</p>
         <p class="mb2 mt2">ORM Gorm, Eloquent y Lucid.</p>

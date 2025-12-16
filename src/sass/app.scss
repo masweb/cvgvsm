@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import '../../node_modules/basscss/css/basscss.css';
 
 html,
@@ -61,7 +63,13 @@ html.dark {
   }
   .toggle {
     background-color: #ddd;
-    color: #333;
+    border: 1px solid #000;
+  }
+
+  .font-toggle,
+  .italic-toggle {
+    background-color: #222;
+    color: #ddd;
     border: 1px solid #000;
   }
 
@@ -135,5 +143,100 @@ html.dark {
   .gridBlock {
     aspect-ratio: 1 / 1;
     border-radius: 2px;
+  }
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.controls {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.content {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content.transitioning {
+  opacity: 0.3;
+}
+
+.toggle {
+  width: 34px;
+  height: 34px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #333;
+  color: #ddd;
+  border: 1px solid #fff;
+}
+
+.font-toggle {
+  width: 34px;
+  height: 34px;
+  position: fixed;
+  right: 10px;
+  top: 88px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.italic-toggle {
+  width: 34px;
+  height: 34px;
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.weight-select {
+  position: fixed;
+  right: 52px;
+  top: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50px;
+  font-style: italic;
+  font-weight: bold;
+  width: 130px;
+}
+
+@media print {
+  .controls,
+  .toggle,
+  .font-toggle,
+  .italic-toggle,
+  .weight-select {
+    display: none !important;
   }
 }
