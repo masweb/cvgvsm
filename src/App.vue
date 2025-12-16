@@ -78,8 +78,8 @@ const { currentTheme, toggleTheme } = useTheme()
           de <strong>Git</strong>, <strong>GitHub</strong>, <strong>GitLab</strong>,
           <strong>Docker</strong>, <strong>IA para programar</strong>. <strong>Usabilidad</strong>,
           <strong>interfaces gráficas</strong>, <strong>WYSIWYG</strong>,
-          <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>,
-          <strong>SCSS</strong> 12 años experiencia.
+          <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>, 18
+          años experiencia.
         </p>
         <p>
           Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript -
