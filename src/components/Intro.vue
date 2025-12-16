@@ -56,11 +56,7 @@ onMounted(() => {
           <strong>Proyectos backend</strong> en GO/GIN, estupendos lenguaje/framework para realización de proyectos de
           alto rendimiento, escalable, seguro y de desarrollo rápido.
         </p>
-        <p class="text">
-          <strong>Desarrollo asistido por IA</strong>, control absoluto de lo que ocurre en mis proyectos, yo decido
-          cómo y por qué se toman deciciones de toda índole, la IA pica código y asiste, cuando no lo hago yo para no
-          perder la costumbre...
-        </p>
+
         <p class="text">
           <strong>Reutilización de componentes</strong>, <strong>estudio de la arquitectura</strong>,
           <strong>buenas prácticas</strong>, <strong>código legible y mantenible</strong>,
@@ -76,6 +72,21 @@ onMounted(() => {
           de IA para usuario final, WASM y GO.
         </p>
         <p class="text">Deploy, Docker, integración contínua, diferentes plataformas.</p>
+
+        <h3 class="mb2"><strong>Inteligencia artificial</strong></h3>
+
+        <p class="text">
+          <strong>Desarrollo asistido por IA</strong>, control absoluto de lo que ocurre en mis proyectos, yo decido
+          cómo y por qué se toman decisiones de toda índole, la IA pica código y asiste, cuando no lo hago yo para no
+          perder la costumbre...
+        </p>
+
+        <p class="text">
+          Programación de <strong>chatboots personalizados</strong> alto y bajo coste. Instalación y manejo de
+          <strong> Stable Diffusion</strong> y <strong>ComfyUI</strong> para generación de imágenes y vídeos de alta
+          calidad, <strong>SD</strong>, <strong>XL</strong>, <strong>Flux</strong> .... Instalación y manejo de software
+          <strong>RCV</strong> de Audio por IA.
+        </p>
       </n-grid-item>
     </n-grid>
 
@@ -155,7 +166,8 @@ onMounted(() => {
     <n-grid class="mt0" cols="1 s:1 m:3 " x-gap="10" responsive="screen">
       <n-grid-item>
         <p class="mb2 mt2">Código mantenible y legible, convenciones de código.</p>
-        <p class="mb2 mt2">Gestión de conexión, repositorios API, fetch, ofetch, axios..</p>
+        <p class="mb2 mt2">Gestión de conexión, repositorios API REST, fetch, ofetch, axios..</p>
+        <p class="mb2 mt2">Protocolos API REST, WebSockets, GraphQL</p>
         <p class="mb2 mt2">Internacionalización.</p>
         <p class="mb2 mt2">Persistencia de datos. IndexDB, LocalStorage, Node fs ...</p>
         <p class="mb2 mt2">Autenticación.</p>
@@ -200,6 +212,7 @@ onMounted(() => {
         <p class="mb2 mt1">
           Creación, diseño y optimización de bases de datos relacionales MySql, MariaDB, Postgress...
         </p>
+        <p class="mb2 mt2">Protocolos API REST, WebSockets, GraphQL, SOAP, gRPC, Webhooks</p>
         <p class="mb2 mt2">Migraciones y generación de datos de prueba.</p>
         <p class="mb2 mt2">Login y registro seguro, encriptación.</p>
         <p class="mb1 mt2">Gestión y proceso de ficheros desde el servidor, imagen, vectorial, excel, pdf ...</p>
