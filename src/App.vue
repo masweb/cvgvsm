@@ -8,7 +8,7 @@ const { currentTheme, toggleTheme } = useTheme()
 
   <header class="container mb5 cv">
     <div class="row mt-3">
-      <div class="col-12 col-md-6 d-flex justify-content-end">
+      <div class="col-12 col-md-6 d-flex justify-content-start justify-content-sm-center">
         <img class="pic" src="/IMG_4663RED.png" alt="Foto de Guillermo Valentín Sánchez" />
       </div>
 
@@ -32,7 +32,7 @@ const { currentTheme, toggleTheme } = useTheme()
       <article class="col-12 col-md-6">
         <p>
           Soy entusiasta de las tecnologías y desarrollo de software, codifico profesionalmente
-          <strong>desde 2012</strong> . Me considero un profesional con fuerte capacidad analítica y
+          <strong>desde 2012</strong>. Me considero un trabajador con fuerte capacidad analítica y
           visión sistémica, me siento cómodo en entornos que requieren procesamiento profundo de
           información, innovación y atención meticulosa a la calidad. Aprendizaje rápido de nuevas
           tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
@@ -44,8 +44,7 @@ const { currentTheme, toggleTheme } = useTheme()
 
         <p>
           Soy una persona que disfruta mucho de la vida, intento estar siempre de buen humor y me
-          encanta hacer reír a las personas. Esto no interfiere en absoluto en el respeto a las
-          situaciones que requieran seriedad.
+          encanta hacer reír a las personas en los momentos adecuados.
         </p>
 
         <p>
@@ -71,13 +70,13 @@ const { currentTheme, toggleTheme } = useTheme()
           desarrollo rápido.
         </p>
         <p>
-          <strong>Reutilización de componentes</strong>,
+          <strong>Interfaces gráficas</strong>, <strong>UX/UI</strong>, <strong>usabilidad</strong>,
+          <strong>WYSIWYG</strong>, <strong>reutilización de componentes</strong>,
           <strong>estudio de la arquitectura</strong>, <strong>buenas prácticas</strong>,
           <strong>código legible y mantenible</strong>, <strong>patrones de diseño</strong>,
-          <strong>pruebas unitarias</strong> y <strong>end to end</strong> . Configuración y manejo
-          de <strong>Git</strong>, <strong>GitHub</strong>, <strong>GitLab</strong>,
-          <strong>Docker</strong>, <strong>IA para programar</strong>. <strong>Usabilidad</strong>,
-          <strong>interfaces gráficas</strong>, <strong>WYSIWYG</strong>,
+          <strong>pruebas unitarias</strong> y <strong>end to end</strong>.
+          <strong>Usabilidad</strong>. Configuración y manejo de <strong>Git</strong>,
+          <strong>GitHub</strong>, <strong>GitLab</strong>, <strong>Docker</strong>.
           <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>, 18
           años experiencia.
         </p>
@@ -92,17 +91,17 @@ const { currentTheme, toggleTheme } = useTheme()
           plataformas.
         </p>
 
-        <h3 class="mb-2 mt-4"><strong>Inteligncia Artificial</strong></h3>
+        <h3 class="mb-2 mt-4"><strong>Inteligencia Artificial</strong></h3>
         <p>
-          <strong></strong>Desarrollo asistido por IA, control absoluto de lo que ocurre en mis
-          proyectos, yo decido cómo y por qué se toman decisiones de toda índole, la IA pica código
-          y asiste, cuando no lo hago yo para no perder la costumbre...
+          Desarrollo asistido por IA, control absoluto de lo que ocurre en mis proyectos, yo decido
+          cómo y por qué se toman decisiones de toda índole, la IA pica código y asiste, cuando no
+          lo hago yo para no perder la costumbre...
         </p>
         <p>
-          <strong>Programación de chatboots</strong> personalizados alto y bajo coste. Instalación y
+          <strong>Programación de chatbots</strong> personalizados alto y bajo coste. Instalación y
           manejo de <strong>Stable Diffusion</strong> y <strong>ComfyUI</strong> para generación de
           imágenes y vídeos de alta calidad, <strong>SD</strong>, <strong>XL</strong>,
-          <strong>Flux</strong> .... Instalación y manejo de software <strong>RCV</strong> de Audio
+          <strong>Flux</strong> .... Instalación y manejo de software <strong>RVC</strong> de Audio
           por IA.
         </p>
       </article>
@@ -114,13 +113,13 @@ const { currentTheme, toggleTheme } = useTheme()
         <p class="mb-0"><b>Centro de estudios de informática superior Alicante.</b></p>
         <p class="mt-0">Programador de gestión - Analista programador 1990 – 1992.</p>
         <h3 class="mb-0"><strong>Inglés</strong></h3>
-        <p class="mb-0">Leo y es escribo pero no hablo ni entiendo con facilidad.</p>
+        <p class="mb-0">Leo y escribo pero no hablo ni entiendo con facilidad.</p>
       </article>
 
       <article class="col-12 col-md-6">
         <h2 class="mb-2 mt-4"><strong>Autodidacta</strong></h2>
         <p class="mt-0">
-          Mi formación se basa en el seguimiento, testeo y aprendizage mediante artículos, cursos,
+          Mi formación se basa en el seguimiento, testeo y aprendizaje mediante artículos, cursos,
           libros, etc... de todas las tecnologías susceptibles de mejorar la eficiencia en el
           desarrollo de software.
         </p>
@@ -165,11 +164,11 @@ const { currentTheme, toggleTheme } = useTheme()
 
           <p class="mb-0"><b>MASA International</b></p>
           <p class="mt-0 mb-0">Diseñador Gráfico (encargado dept.)</p>
-          <p class="mt-0 mb-3">jun.2005 • ses.2008 • Torrevieja</p>
+          <p class="mt-0 mb-3">jun.2005 • sep.2008 • Torrevieja</p>
         </div>
 
         <div class="col-12 col-md-4">
-          <p class="mb-0 mt1"><b>Imprenta Hnos. Rastoll</b></p>
+          <p class="mb-0 mt-1"><b>Imprenta Hnos. Rastoll</b></p>
           <p class="mt-0 mb-0">Diseñador Gráfico, artefinalista</p>
           <p class="mt-0 mb-3">dic.2003 • oct.2005 • Santa Pola</p>
 
@@ -204,7 +203,7 @@ const { currentTheme, toggleTheme } = useTheme()
         </div>
         <div class="col-12 col-md-4">
           <p class="mb-1 mt-2">Validación front-end y back-end en vivo.</p>
-          <p class="mb-3 mt1">Marcado semántico.</p>
+          <p class="mb-3 mt-1">Marcado semántico.</p>
           <p class="mb-1 mt-2">Web components, modularización, reutilización.</p>
           <p class="mb-3 mt-2">Web App.</p>
           <p class="mb-3 mt-2">Cookies.</p>
@@ -213,14 +212,14 @@ const { currentTheme, toggleTheme } = useTheme()
           <p class="mb-3 mt-2">Pre-procesadores CSS.</p>
           <p class="mb-3 mt-2">Desarrollo responsive, mobile first.</p>
           <p class="mb-3 mt-2">
-            Frameworks: Bulma, Naive-ui, Bootstrap, Fundation, Pure, UI-Kit, Skeleton...
+            Frameworks: Bulma, Naive-ui, Bootstrap, Foundation, Pure, UI-Kit, Skeleton...
           </p>
           <p class="mb-3 mt-2">Tipografía web.</p>
         </div>
         <div class="col-12 col-md-4">
           <p class="mb-3 mt-2">Gráficos vectoriales (svg).</p>
           <p class="mb-1 mt-2">Animaciones CSS.</p>
-          <p class="mb-3 mt1">Javascript orientado a objetos.</p>
+          <p class="mb-3 mt-1">Javascript orientado a objetos.</p>
           <p class="mb-3 mt-2">Javascript asíncrono.</p>
           <p class="mb-3 mt-2">Estructuras de datos Json.</p>
           <p class="mb-3 mt-2">TypeScript.</p>
@@ -242,10 +241,10 @@ const { currentTheme, toggleTheme } = useTheme()
           <p class="mb-3 mt-1">
             Creación de backend API Rest o con plantillas con GO/Gin, TypeScript/Adonis, PHP/Laravel
           </p>
-          <p class="mb-3 mt-2">Protocolos API REST, WebSockets, GraphQL, SOAP, gRPC, Webhooks.w</p>
+          <p class="mb-3 mt-2">Protocolos API REST, WebSockets, GraphQL, SOAP, gRPC, Webhooks.</p>
           <p class="mb-3 mt-3">
             Creación, diseño y optimización de bases de datos relacionales MySql, MariaDB,
-            Postgress...
+            PostgreSQL...
           </p>
           <p class="mb-3 mt-2">Migraciones y generación de datos de prueba.</p>
         </div>
