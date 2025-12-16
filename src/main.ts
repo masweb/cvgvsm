@@ -1,11 +1,11 @@
-import "./sass/app.scss";
-
 import { createApp } from 'vue'
+import '@/css/css.scss'
+import CoreuiVue from '@coreui/vue'
+
+import './utils/coreui-dark-vue.js'
 import App from './App.vue'
-import router from './router'
 
 const app = createApp(App)
-
-app.use(router)
+app.use(CoreuiVue)
 
 app.mount('#app')
