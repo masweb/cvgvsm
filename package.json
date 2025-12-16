@@ -13,17 +13,16 @@
     "lint:eslint": "eslint . --fix --cache",
     "lint": "run-s lint:*",
     "format": "prettier --write --experimental-cli src/",
-    "deploy": "cross-env NODE_ENV=production npm run build && gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production VITE_APP_BASE_URL=/ npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@coreui/coreui": "^5.4.3",
     "@coreui/vue": "^5.7.0",
     "@tabler/icons-vue": "^3.36.0",
     "@vueuse/core": "^14.1.0",
-    "gh-pages": "^6.3.0",
-    "vee-validate": "^4.15.1",
     "vue": "^3.5.25",
     "vue-i18n": "^11.2.2",
+    "vee-validate": "^4.15.1",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
@@ -34,7 +33,6 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
-    "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "eslint-plugin-oxlint": "~1.29.0",
     "eslint-plugin-vue": "~10.5.1",
