@@ -109,6 +109,18 @@ const descargarCV = () => {
           por IA.
         </p>
       </article>
+      <section class="row mt-0">
+        <article class="col-12 col-md-6">
+          <button @click="descargarCV" class="btn btn-link btn-sm" type="button">
+            <img
+              src="/downpdf.svg"
+              width="73"
+              alt="Descarga currículum en PDF"
+              title="Descarga currículum en PDF"
+            />
+          </button>
+        </article>
+      </section>
     </section>
 
     <section class="row mt-0">
