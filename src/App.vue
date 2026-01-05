@@ -14,8 +14,8 @@ const { currentTheme, toggleTheme } = useTheme()
 
       <div class="col-12 col-md-6">
         <h1 class="mt-4 mt-md-0"><strong>Guillermo Valentín Sánchez</strong></h1>
-        <h3 class="mt-1 mb-0"><strong>Desarrollador full-stack</strong></h3>
-        <h3 class="mt-1 mb-0"><strong>Especialista front-end ecosistema Vue</strong></h3>
+        <h3 class="mt-1 mb-0"><strong>Desarrollador front-end</strong></h3>
+        <h3 class="mt-1 mb-0"><strong>Vue, React, Angular, TypeScript</strong></h3>
         <h4 class="mt-2 mb-0">Diseñador gráfico</h4>
         <p class="mt-3">Fecha de nacimiento: 1973</p>
         <p class="lead">
@@ -31,22 +31,17 @@ const { currentTheme, toggleTheme } = useTheme()
     <section class="row mt-3" cols="1 s:1 m:2 " x-gap="10" responsive="screen">
       <article class="col-12 col-md-6">
         <p>
-          Soy entusiasta de las tecnologías y desarrollo de software, codifico profesionalmente
-          <strong>desde 2012</strong>. Me considero un trabajador con fuerte capacidad analítica y
-          visión sistémica, me siento cómodo en entornos que requieren procesamiento profundo de
-          información, innovación y atención meticulosa a la calidad. Aprendizaje rápido de nuevas
-          tecnologías/metodologías. Capacidad para establecer conexiones no evidentes entre
-          conceptos. Resolución creativa de problemas complejos. Perfeccionismo constructivo
-          orientado a resultados. Sensibilidad para detectar necesidades no expresadas de
-          clientes/equipos. Capacidad para procesar múltiples variables simultáneamente en la toma
-          de decisiones. Pensamiento estratégico y visión holística.
+          Soy una persona que disfruta de la vida, suelo estar de buen humor, entusiasta de las
+          tecnologías y desarrollo de software, codifico profesionalmente
+          <strong>desde 2012</strong>. Me considero un trabajador con fuerte capacidad analítica, me
+          siento cómodo en situaciones complejas, procuro estar a la última en las técnicas
+          front-end. Aprendizaje rápido de nuevas tecnologías/metodologías. Capacidad para
+          establecer conexiones no evidentes entre conceptos. Resolución creativa de problemas
+          complejos. Perfeccionismo constructivo orientado a resultados (a veces hay que saltar
+          alguna regla). Sensibilidad para detectar necesidades no expresadas de clientes/equipos.
+          Capacidad para procesar múltiples variables simultáneamente en la toma de decisiones.
+          Pensamiento estratégico y visión general desde diferentes puntos de vista.
         </p>
-
-        <p>
-          Soy una persona que disfruta mucho de la vida, intento estar siempre de buen humor y me
-          encanta hacer reír a las personas en los momentos adecuados.
-        </p>
-
         <p>
           En los últimos años he sido partícipe en un porcentaje muy alto en un proyecto realmente
           grande para gestión de eventos donde he ideado y producido un editor web desde 0
@@ -54,16 +49,6 @@ const { currentTheme, toggleTheme } = useTheme()
           mejores métodos, técnicas y librerías para desarrollo front-end, además de habituarme al
           trabajo en equipo con <strong>Jira</strong>, <strong>Git Flow</strong>.
         </p>
-        <p>
-          Desarrollo de grandes proyectos, apps nocode, podría decir que soy experto en
-          <strong>Vue</strong> 3, <strong>Typescript</strong> y <strong>Nuxt</strong> 3 al realizar
-          una gran cantidad de proyectos profesionales en este ecosistema (también en las versiones
-          2). Podría crear y adaptarme con cierta facilidad proyectos de <strong>React</strong> y
-          <strong>Angular</strong>.
-        </p>
-      </article>
-
-      <article class="col-12 col-md-6">
         <p>
           Además, en los últimos tiempos estoy realizando proyectos backend en GO, estupendo
           lenguaje para realización de proyectos de alto rendimiento, escalable, seguro y de
@@ -77,30 +62,43 @@ const { currentTheme, toggleTheme } = useTheme()
           <strong>pruebas unitarias</strong> y <strong>end to end</strong>.
           <strong>Usabilidad</strong>. Configuración y manejo de <strong>Git</strong>,
           <strong>GitHub</strong>, <strong>GitLab</strong>, <strong>Docker</strong>.
-          <strong>accesibilidad</strong>, <strong>multi idioma</strong>, <strong>CSS</strong>, 18
-          años experiencia.
+          <strong>accesibilidad</strong>, <strong>multi idioma</strong>,
+          <strong>Maquetación CSS</strong>, 18 años experiencia.
         </p>
+      </article>
+
+      <article class="col-12 col-md-6">
         <p>
-          Desarrollo de aplicaciones completas, backend GO - Gin o en PHP - Laravel o Typescript -
-          Adonis / Express / Nitro.... Comercio electrónico, backoffices personalizados,
-          aplicaciones móviles y de escritorio. Wordpress, PrestaShop, Shopify.
+          Desarrollo de grandes proyectos, apps nocode, SPA, SSR, desarrollo de aplicaciones
+          completas. Backend: GO - Gin o en PHP - Laravel o Typescript - Adonis / Express /
+          Nitro....<br />
+          Comercio electrónico, backoffices personalizados, aplicaciones móviles y de escritorio.
+          Wordpress, PrestaShop, Shopify.
         </p>
 
         <p>
-          Deploy, Docker, Docker: diseño de infraestructuras, integración contínua, diferentes
-          plataformas.
+          Deploy, Docker: diseño de infraestructuras, integración contínua, diferentes plataformas.
         </p>
 
         <h3 class="mb-2 mt-4"><strong>Inteligencia Artificial</strong></h3>
         <p>
-          Desarrollo asistido por IA, control absoluto de lo que ocurre en mis proyectos, yo decido
-          cómo y por qué se toman decisiones de toda índole, la IA pica código y asiste, cuando no
-          lo hago yo para no perder la costumbre...
+          Desarrollo asistido por IA, intento estar al día de los modelos de programación, hay
+          muchas ofertas, tratando de escoger la mejor, he trabajado mucho con Claude 3.7 y 4, y
+          algo con Gemini 3 Pro y Gemini 3 Flash, DeepSeek, Groc, Mistral también dispongo de
+          modelos en local con Ollama. No hago Vibe coding, aunque sí le pido grandes boilerplates
+          que sé conozco el código y puedo modificarlo al gusto, también le pido algoritmos
+          complejos, aunque de vez en cuado hago yo alguno para no perder la cuerda... todo los
+          resultados son supervisados, le pido que use patrones ya establecidos..., también le pido
+          técnicas mejores o nuevas que no conozco para aprenderlas e implementarlas si en el caso
+          concreto encajan mejor. No sé muy bien cómo avanzará todo esto, en cualquier caso ninguno
+          de mis desarrollos dependo de la IA para ser mejorados o modificados, ya vermos si en un
+          futuro esto es necesario, atento para enfocarme an Python y DevOps si fuera necesario.
         </p>
         <p>
-          <strong>Programación de chatbots</strong> personalizados alto y bajo coste. Instalación y
-          manejo de <strong>Stable Diffusion</strong> y <strong>ComfyUI</strong> para generación de
-          imágenes y vídeos de alta calidad, <strong>SD</strong>, <strong>XL</strong>,
+          <strong>Programación de chatbots</strong> personalizados alto y bajo coste, entrenamiento
+          de modelos, tratamiento de datos para la IA, instalación y manejo de
+          <strong>Stable Diffusion</strong> y <strong>ComfyUI</strong> para generación de imágenes y
+          vídeos de alta calidad, <strong>SD</strong>, <strong>XL</strong>,
           <strong>Flux</strong> .... Instalación y manejo de software <strong>RVC</strong> de Audio
           por IA.
         </p>
