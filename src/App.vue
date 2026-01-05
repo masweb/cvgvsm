@@ -16,7 +16,7 @@ const { currentTheme, toggleTheme } = useTheme()
         <h1 class="mt-4 mt-md-0"><strong>Guillermo Valentín Sánchez</strong></h1>
         <h3 class="mt-1 mb-0"><strong>Desarrollador front-end</strong></h3>
         <h3 class="mt-1 mb-0"><strong>Vue, React, Angular, TypeScript</strong></h3>
-        <h4 class="mt-2 mb-0">Diseñador gráfico</h4>
+        <h4 class="mt-2 mb-0">Diseñador gráfico 20 años</h4>
         <p class="mt-3">Fecha de nacimiento: 1973</p>
         <p class="lead">
           Hola!, desde el año 1992 he trabajado en entornos de edición y publicidad, como diseñador
